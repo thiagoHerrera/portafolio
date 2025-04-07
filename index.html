@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="progress-loader">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <nav>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <header id="inicio">
+            <h1>Hola, soy Thiago Herrera</h1>
+            <p>Programador Full Stacks | Desarrollador de Aplicaciones y Paginas Webs.</p>
+
+            <section id="lenguajes" class="lenguajes">
+                <h2>SKILLS</h2>
+                <div class="logos">
+                    <div class="logo"><img src="./img/html.png" alt="HTML5"></div>
+                    <div class="logo"><img src="./img/lenguaje-de-programacion.png" alt="CSS3"></div>
+                    <div class="logo"><img src="./img/js.png" alt="JS"></div>
+                    <div class="logo"><img src="./img/piton.png" alt="Python"></div>
+                    <div class="logo"><img src="./img/icons8-django-a-high-level-python-web-framework-that-encourages-rapid-development-72.png" alt="Django"></div>
+                    <div class="logo"><img src="./img/lenguaje-de-programacion-php.png" alt="PHP"></div>
+                    <div class="logo"><img src="./img/mysql.png" alt="MySQL"></div>
+                    <div class="logo"><img src="./img/c-.png" alt="C++"></div>
+                    <div class="logo"><img src="./img/java.png" alt="Java"></div>
+                    <div class="logo"><img src="./img/impresora-3d.png" alt="3D Desing"></div>
+                </div>
+            </section>
+        </header>
+
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <div class="proyectos">
+                <div class="proyecto">
+                    <img src="./img/mcking.png" width="300" height="250" alt="MCking">
+                    <h3>McKing</h3>
+                    <p>Aplicación Web que simula una hamurgueseria.</p>
+                    <a href="./Proyectos/Restaurante/html/form-login.html">Ver proyecto</a>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/tw.png" width="300" height="250" alt="TW">
+                    <h3>TW Company Fitness</h3>
+                    <p>Pagina Fitness, diseñada para el ingreso de rutinas, y el apartado de calorias.</p>
+                    <a href="./Proyectos/projectodj/mipaginaweb/pagina/templates/login.html">Ver proyecto</a>
+                </div>
+                <div class="proyecto">
+                    <video width="300" height="250"  id="videoBlock" alt="Block Master" muted>
+                        <source src="./img/auto.mp4" type="video/mp4">
+                    </video>
+                    <h3>FlashBot 2.0</h3>
+                    <p>Auto robot, diseñado en 3D y programado en Arduino IDE</p>
+                    <a href="#">Coming soon...</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacion">
+            <h2>Mi Formación</h2>
+            <div class="formacion">
+                <div class="curso">
+                    <img src="./img/th.jpg" alt="Curso 1" class="curso-imagen">
+                    <div class="curso-info">
+                        <h3>Escuela Fatima 2011 - 2022</h3>
+                        <p>Escuela Nuestra Señora de Fatima, de nivel medio.</p>
+                    </div>
+                </div>
+                <div class="curso">
+                    <img src="./img/terraf.jpg" alt="Curso 2" class="curso-imagen">
+                    <div class="curso-info">
+                        <h3>Escuela Roberto Arlt 2022 - Actualidad</h3>
+                        <p>Comunidad Educativa Roberto Arlt E.E.S.T.N°3, nivel Tecnico Informatica </p>
+                    </div>
+                </div>
+                <div class="curso">
+                    <img src="./img/godot.jpg" alt="Curso 3" class="curso-imagen">
+                    <div class="curso-info">
+                        <h3>Curso de creacion de Videojuegos </h3>
+                        <p>Curso de creacion de juegos 2D, diseñado en Godot Engine.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme a través de las siguientes plataformas:</p>
+            <div class="contacto">
+                <a href="https://github.com/thiagoHerrera"><img src="./img/git.png" class="icono" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/thiago-herrera-90185a263/" ><img src="./img/in.png" class="icono" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:tititomash@gmail.com" ><img src="./img/gmail.png" class="icono" aria-label="Correo"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Thiago Herrera. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
