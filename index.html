@@ -29,7 +29,7 @@
             <p>Programador Full Stacks | Desarrollador de Aplicaciones y Paginas Webs.</p>
 
             <section id="lenguajes" class="lenguajes">
-                <h2>SKILLS</h2> img
+                <h2>SKILLS</h2> 
                 <div class="logos">
                     <div class="logo"><img src="./Assets/img/html.png" alt="HTML5"></div>
                     <div class="logo"><img src="./Assets/img/lenguaje-de-programacion.png" alt="CSS3"></div>
@@ -47,26 +47,40 @@
 
         <section id="proyectos">
             <h2>Mis Proyectos</h2>
+        
+            <!-- Dropdown para filtrar -->
+            <label for="filtro">Profe:</label>
+            <select id="filtro" onchange="filtrarProyectos()">
+                <option value="todos">Todos</option>
+                <option value="fede">Fede</option>
+                <option value="chaza">Chaza</option>
+                <option value="año">2024</option>
+            </select>
+        
             <div class="proyectos">
-                <div class="proyecto">
+                <!-- Proyecto de Fede -->
+                <div class="proyecto" data-autor="año">
                     <img src="./Assets/img/mcking.png" width="300" height="250" alt="MCking">
                     <h3>McKing</h3>
-                    <p>Aplicación Web que simula una hamurgueseria.</p>
+                    <p>Aplicación Web que simula una hamburguesería.</p>
+                    <a href="https://github.com/thiagoHerrera/web">Ver proyecto</a>
+                </div>
+                
+                <div class="proyecto" data-autor="fede">
+                    <img src="./Assets/img/mcking.png" width="300" height="250" alt="MCking">
+                    <h3>McKing</h3>
+                    <p>Aplicación Web que simula una hamburguesería.</p>
                     <a href="./Assets/Proyectos/Restaurante/html/form-login.html">Ver proyecto</a>
                 </div>
-                <div class="proyecto">
+
+                <!-- Proyecto de Chaza -->
+                <div class="proyecto" data-autor="año">
                     <img src="./Assets/img/tw.png" width="300" height="250" alt="TW">
                     <h3>TW Company Fitness</h3>
-                    <p>Pagina Fitness, diseñada para el ingreso de rutinas, y el apartado de calorias.</p>
-                    <a href="./Assets/Proyectos/projectodj/mipaginaweb/pagina/templates/login.html">Ver proyecto</a>
+                    <p>Página Fitness, diseñada para el ingreso de rutinas y el apartado de calorías.</p>
+                    <a href="https://github.com/thiagoHerrera/Fitness-Web">Ver proyecto</a>
                 </div>
-                <div class="proyecto">
-                    <video width="300" height="250"  id="videoBlock" alt="Block Master" muted>
-                        <source src="./Assets/img/auto.mp4" type="video/mp4">
-                    </video>
-                    <h3>FlashBot 2.0</h3>
-                    <p>Auto robot, diseñado en 3D y programado en Arduino IDE</p>
-                    <a href="#">Coming soon...</a>
+        
                 </div>
             </div>
         </section>
