@@ -50,42 +50,47 @@
         
             <!-- Dropdown para filtrar -->
             <label for="filtro">Profe:</label>
-            <select id="filtro" onchange="filtrarProyectos()">
+            <select id="filtro" >
                 <option value="todos">Todos</option>
-                <option value="fede">Fede</option>
+                <option value="fedejs">Fede JS</option>
+                <option value="fededj">Fede DJ</option>
                 <option value="chaza">Chaza</option>
-                <option value="año">2024</option>
+                <option value="anio">2024</option>
             </select>
         
             <div class="proyectos">
                 <!-- Proyecto de otros Años -->
-                <div class="proyecto" data-autor="año">
+                <div class="proyecto" data-autor="anio">
                     <img src="./Assets/img/mcking.png" width="300" height="250" alt="MCking">
                     <h3>McKing</h3>
                     <p>Aplicación Web que simula una hamburguesería.</p>
                     <a href="https://github.com/thiagoHerrera/web">Ver proyecto</a>
                 </div>
 
-                <div class="proyecto" data-autor="año">
+                <div class="proyecto" data-autor="anio">
                     <img src="./Assets/img/tw.png" width="300" height="250" alt="TW">
                     <h3>TW Company Fitness</h3>
                     <p>Página Fitness, diseñada para el ingreso de rutinas y el apartado de calorías.</p>
                     <a href="https://github.com/thiagoHerrera/Fitness-Web">Ver proyecto</a>
                 </div>
-
-                <!-- Proyecto de Fede -->
-                  
-                <div class="proyecto" data-autor="fede">
-                    <img src="./Assets/img/mcking.png" width="300" height="250" alt="MCking">
-                    <h3>McKing</h3>
-                    <p>Aplicación Web que simula una hamburguesería.</p>
-                    <a href="./Assets/Proyectos/Restaurante/html/form-login.html">Ver proyecto</a>
-                </div>
-
-                <!-- Proyecto de Chaza -->
-              
         
+                <!-- Proyectos de Chaza -->
+                <div class="proyecto" data-autor="chaza">
+                    <img src="./Assets/img//tarjeta.png" width="300" height="250" alt="TW">
+                    <h3>Tarjeta</h3>
+                    <p>Tarjeta de Presentacion.</p>
+                    <a href="/Chaza/Tp01_Tarjeta/index.html">Ver proyecto</a>
                 </div>
+
+                <!-- Proyectos de Fede -->
+
+                <div class="proyecto" data-autor="fedejs">
+                    <h3>Clase 1</h3>
+                    <p>Arrays.</p>
+                    <a href="/Fede/Clase 00/Info-Funciones/index.html">Ver proyecto</a>
+                </div>
+                
+                
             </div>
         </section>
 

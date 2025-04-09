@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     setTimeout(() => {
         const loaderWrapper = document.getElementById("loader-wrapper");
         const mainContent = document.getElementById("main-content");
@@ -27,30 +26,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const video = document.getElementById('videoBlock');
-
-    video.addEventListener('mouseover', function() {
-        video.play();
-    });
-
-    video.addEventListener('mouseout', function() {
-        video.pause();
-    });
-
-    // 🎯 Filtro por autor (Fede o Chaza)
-    const filtro = document.getElementById('filtro');
-    const proyectos = document.querySelectorAll('.proyecto');
-
-    filtro.addEventListener('change', () => {
-        const seleccion = filtro.value;
-
-        proyectos.forEach(proyecto => {
-            const autor = proyecto.getAttribute('data-autor');
-            if (seleccion === 'todos' || autor === seleccion) {
-                proyecto.style.display = 'block';
-            } else {
-                proyecto.style.display = 'none';
-            }
+    if (video) {
+        video.addEventListener('mouseover', function () {
+            video.play();
         });
-    });
 
+        video.addEventListener('mouseout', function () {
+            video.pause();
+        });
+    }
+
+    // 🎯 Filtro por autor (Fede, Chaza o 2024)
+    const filtro = document.getElementById('filtro');
+
+    if (filtro) {
+        filtro.addEventListener('change', () => {
+            const seleccion = filtro.value;
+            const proyectos = document.querySelectorAll('.proyecto'); // 🔥 ¡acá adentro!
+
+            proyectos.forEach(proyecto => {
+                const autor = proyecto.getAttribute('data-autor');
+                if (seleccion === 'todos' || autor === seleccion) {
+                    proyecto.style.display = 'block';
+                } else {
+                    proyecto.style.display = 'none';
+                }
+            });
+        });
+    }
 });

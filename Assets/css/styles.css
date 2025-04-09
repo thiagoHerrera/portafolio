@@ -562,3 +562,17 @@ header {
     box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.2);
   }
   
+  /* En tu CSS */
+.proyecto {
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.proyecto.oculto {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+}
