@@ -1,0 +1,26 @@
+{% block content %}
+<link rel="stylesheet" href="../static/styles/signin.css" />
+<div class="container">
+    <div class="left-panel">
+        <img src="../static/img/logo2.png" alt="Logo" class="logo">
+    </div>
+    <div class="right-panel">
+        <img src="../static/img/logo.png" alt="Plogo" class="principal-logo">
+        <h2>Sign In</h2>
+        <p>Ingresa tu Nombre y Contraseña de Usuario</p>
+        <form action="/signin/" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                Nombre de Usuario:
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                Contraseña:
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Sign in</button>
+        </form>
+        <h4>No tienes cuenta?<a class="subrayado" href="/signup">Signup</a></h4>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "two_factor/_base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'styles/signin.css' %}" />
+<div class="container">
+    <div class="left-panel">
+        <img src="{% static 'img/logo2.png' %}" alt="Logo" class="logo">
+    </div>
+    <div class="right-panel">
+        <img src="{% static 'img/logo.png' %}" alt="Plogo" class="principal-logo">
+        
+        <h2>
+            {% if wizard.steps.current == 'auth' %}
+                Sign In
+            {% elif wizard.steps.current == 'token' %}
+                Verificación en dos pasos
+            {% endif %}
+        </h2>
+
+        <p>
+            {% if wizard.steps.current == 'auth' %}
+                Ingresa tu Nombre y Contraseña de Usuario
+            {% elif wizard.steps.current == 'token' %}
+                Ingresa el código del autenticador
+            {% endif %}
+        </p>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ wizard.management_form }}
+
+            {% for field in wizard.form.visible_fields %}
+                <div class="form-group">
+                    {% if wizard.steps.current == 'auth' %}
+                        {% if field.name == 'username' %}
+                            <small class="form-text text-muted">Nombre de usuario</small>
+                        {% elif field.name == 'password' %}
+                            <small class="form-text text-muted">Contraseña</small>
+                        {% endif %}
+                    {% elif wizard.steps.current == 'token' %}
+                        {% if field.name == 'token' %}
+                            <small class="form-text text-muted">Código de seguridad</small>
+                        {% endif %}
+                    {% endif %}
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="text-danger">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            <button type="submit">Sign in</button>
+        </form>
+
+        {% if wizard.steps.current == 'auth' %}
+            <h4>No tienes cuenta? <a class="subrayado" href="/signup">Signup</a></h4>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

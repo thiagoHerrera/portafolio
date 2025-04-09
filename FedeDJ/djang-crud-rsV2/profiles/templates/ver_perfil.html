@@ -1,0 +1,14 @@
+{% block content %}
+<h1>{{ user.username }}'s Profile</h1>
+
+{% if profile %}
+    <img src="{{ profile.fto.url }}" alt="Profile Picture" width="150" height="150">
+    <p><strong>Bio:</strong> {{ profile.bio }}</p>
+    <p><strong>Enclace:</strong> <a href="{{ profile.enlace }}" target="_blank">{{ profile.enlace }}</a></p>
+    <p><strong>Prefencias:</strong> {{ profile.preferencias }}</p>
+{% else %}
+    <p>No hay informacion del perfils.</p>
+{% endif %}
+
+<a href="{% url 'edit_profile' %}">Editar Perfil</a>
+{% endblock %}

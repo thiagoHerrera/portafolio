@@ -1,0 +1,25 @@
+{% extends "two_factor/_base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="right-panel">
+    <h2>Habilitar verificación en dos pasos</h2>
+
+    <form method="post">
+      {% csrf_token %}
+      {{ wizard.management_form }}
+
+      {{ wizard.form.media }}
+
+      {% if wizard.steps.current == "generator" %}
+        <p>Escaneá este código QR con tu app de autenticación</p>
+      {% endif %}
+
+      {{ wizard.form.as_p }}
+
+      <button type="submit">Siguiente</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

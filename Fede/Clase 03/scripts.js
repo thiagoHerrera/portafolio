@@ -1,17 +1,17 @@
-// // PUNTO 1
+// PUNTO 1
 
-// const sumaPotencias2 = (num1, num2, num3, num4)  =>  Math.pow(num1, 2) + Math.pow(num2, 2) + Math.pow(num3, 2) + Math.pow(num4,2);
-// console.log(sumaPotencias2(2,2,2,2))
+const sumaPotencias2 = (num1, num2, num3, num4)  =>  Math.pow(num1, 2) + Math.pow(num2, 2) + Math.pow(num3, 2) + Math.pow(num4,2);
+console.log(sumaPotencias2(2,2,2,2))
 
-// // PUNTO 2
+// PUNTO 2
 
-// const datos = (...datos) =>  datos.join(" ");
-// console.log(datos("hola", "mundo", "soy", "un", "programador"))
+const datos = (...datos) =>  datos.join(" ");
+console.log(datos("hola", "mundo", "soy", "un", "programador"))
 
-// // PUNTO 3
+// PUNTO 3
 
-// const nums = (num) =>  (num >= 90 && num <= 100) ? "Verdadero" : "Falso"
-// console.log(nums(20))
+const nums = (num) =>  (num >= 90 && num <= 100) ? "Verdadero" : "Falso"
+console.log(nums(20))
 
 
 const pokemons=[{
