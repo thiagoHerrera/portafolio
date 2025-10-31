@@ -1,34 +1,23 @@
-"""
-URL configuration for speedrs project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path , include
-from users import views as users_views
-from profiles import views as profiles_views
-from two_factor.views import LoginView, ProfileView
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', users_views.signin, name='2faapp'),
-    path('signup/', users_views.signup, name='signup'),
-    path('landing/', users_views.landing, name='landing'),
-    path('logout/', users_views.signout, name='logout'),
-    path('profile/editar_perfil/', profiles_views.editar_perfil, name='editar_perfil'),
-    path('profile/ver_perfil/', profiles_views.ver_perfil, name='ver_perfil'),
-    # Elimina la duplicación y usa un solo prefijo
-    path('2faapp/account/two_factor/', include('two_factor.urls', namespace='two_factor')),
-
-]
+onScope="nonSxS" />
+    </dependentAssembly>
+  </dependency>
+  <dependency discoverable="yes">
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-WinRE-CloudRec.Resources" version="10.0.19041.1" processorArchitecture="amd64" language="en-US" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" />
+    </dependentAssembly>
+  </dependency>
+  <dependency discoverable="yes">
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-BLB-CLI-Main.Resources" version="10.0.19041.1" processorArchitecture="amd64" language="en-US" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" />
+    </dependentAssembly>
+  </dependency>
+  <dependency discoverable="yes">
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-BLB-Engine-Main.Resources" version="10.0.19041.1" processorArchitecture="amd64" language="en-US" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" />
+    </dependentAssembly>
+  </dependency>
+  <dependency discoverable="yes">
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-BLB-Engine-Proxy-Main.Resources" version="10.0.19041.1" processorArchitecture="amd64" language="en-US" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" />
+    </dependentAssembly>
+  </dependenc

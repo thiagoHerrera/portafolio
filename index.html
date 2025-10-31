@@ -3,174 +3,464 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>Thiago Herrera - Desarrollador Full Stack</title>
     <link rel="stylesheet" href="./Assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
     <div class="loader-wrapper" id="loader-wrapper">
-        <div class="progress-loader">
-            <div class="progress"></div>
+        <div class="loader">
+            <div class="loader-text">Thiago Herrera</div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
         </div>
     </div>
 
-    <div id="main-content" style="display: none;">
-        <nav>
-            <ul class="menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#formacion">Formación</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-
-        <header id="inicio">
-            <h1>Hola, soy Thiago Herrera</h1>
-            <p>Programador Full Stacks | Desarrollador de Aplicaciones y Paginas Webs.</p>
-
-            <section id="lenguajes" class="lenguajes">
-                <h2>SKILLS</h2> 
-                <div class="logos">
-                    <div class="logo"><img src="./Assets/img/html.png" alt="HTML5"></div>
-                    <div class="logo"><img src="./Assets/img/lenguaje-de-programacion.png" alt="CSS3"></div>
-                    <div class="logo"><img src="./Assets/img/js.png" alt="JS"></div>
-                    <div class="logo"><img src="./Assets/img/piton.png" alt="Python"></div>
-                    <div class="logo"><img src="./Assets/img/icons8-django-a-high-level-python-web-framework-that-encourages-rapid-development-72.png" alt="Django"></div>
-                    <div class="logo"><img src="./Assets/img/lenguaje-de-programacion-php.png" alt="PHP"></div>
-                    <div class="logo"><img src="./Assets/img/mysql.png" alt="MySQL"></div>
-                    <div class="logo"><img src="./Assets/img/c-.png" alt="C++"></div>
-                    <div class="logo"><img src="./Assets/img/java.png" alt="Java"></div>
-                    <div class="logo"><img src="./Assets/img/impresora-3d.png" alt="3D Desing"></div>
+    <header class="modern-header" id="modern-header">
+        <div class="header-container">
+            <div class="brand-section">
+                <div class="logo-container">
+                    <div class="logo-circle">
+                        <span class="logo-initial">T</span>
+                        <span class="logo-initial">H</span>
+                    </div>
+                    <div class="brand-info">
+                        <h3 class="brand-name">Thiago Herrera</h3>
+                        <p class="brand-role">Full Stack Developer</p>
+                    </div>
                 </div>
-            </section>
-        </header>
-
-        <section id="proyectos">
-            <h2>Mis Proyectos</h2>
-        
-            <!-- Dropdown para filtrar -->
-            <label for="filtro">Profe:</label>
-            <select id="filtro" >
-                <option value="todos">Todos</option>
-                <option value="fedejs">Fede JS</option>
-                <option value="fededj">Fede DJ</option>
-                <option value="chaza">Chaza</option>
-                <option value="anio">2024</option>
-            </select>
-        
-            <div class="proyectos">
-                <!-- Proyecto de otros Años -->
-                <div class="proyecto" data-autor="anio">
-                    <img src="./Assets/img/mcking.png" width="300" height="250" alt="MCking">
-                    <h3>McKing</h3>
-                    <p>Aplicación Web que simula una hamburguesería.</p>
-                    <a href="https://github.com/thiagoHerrera/web">Ver proyecto</a>
+            </div>
+            
+            <nav class="main-navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link-modern">
+                            <i class="fas fa-home"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre-mi" class="nav-link-modern">
+                            <i class="fas fa-user"></i>
+                            <span>Sobre Mí</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#proyectos" class="nav-link-modern">
+                            <i class="fas fa-code"></i>
+                            <span>Proyectos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#formacion" class="nav-link-modern">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Formación</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link-modern">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
                 </div>
+            </div>
+        </div>
+    </header>
 
-                <div class="proyecto" data-autor="anio">
-                    <img src="./Assets/img/tw.png" width="300" height="250" alt="TW">
-                    <h3>TW Company Fitness</h3>
-                    <p>Página Fitness, diseñada para el ingreso de rutinas y el apartado de calorías.</p>
-                    <a href="https://github.com/thiagoHerrera/Fitness-Web">Ver proyecto</a>
-                </div>
-        
-                <!-- Proyectos de Chaza -->
-                <div class="proyecto" data-autor="chaza">
-                    <img src="./Assets/img//tarjeta.png" width="300" height="250" alt="TW">
-                    <h3>Tarjeta</h3>
-                    <p>Tarjeta de Presentacion.</p>
-                    <a href="./Chaza/Tp01_Tarjeta/index.html">Ver proyecto</a>
-                </div>
+    <main id="main-content" style="display: none;">
 
-                <!-- Proyectos de Fede JS -->
-
-                <div class="proyecto" data-autor="fedejs">
-                    <img src="./Assets/img/js1.png" width="300" height="250" alt="TW">
-                    <h3>Clase 1</h3>
-                    <p>Arrays.</p>
-                    <a href="./Fede/Clase 00/Info-Funciones/index.html">Ver proyecto</a>
+        <section id="inicio" class="hero">
+            <div class="hero-background">
+                <div class="animated-bg">
+                    <div class="gradient-orb orb-1"></div>
+                    <div class="gradient-orb orb-2"></div>
+                    <div class="gradient-orb orb-3"></div>
                 </div>
-                
-                <div class="proyecto" data-autor="fedejs">
-                    <img src="./Assets/img/js1.png" width="300" height="250" alt="TW">
-                    <h3>Clase 2</h3>
-                    <p>Objetos.</p>
-                    <a href="./Fede/Clase 01/index.html">Ver proyecto</a>
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                    <div class="shape shape-5"></div>
+                    <div class="shape shape-6"></div>
                 </div>
-
-                <div class="proyecto" data-autor="fedejs">
-                    <img src="./Assets/img/js1.png" width="300" height="250" alt="TW">
-                    <h3>Clase 3</h3>
-                    <p>Pokemon Cartas.</p>
-                    <a href="./Fede/Clase 02/index.html">Ver proyecto</a>
+                <div class="code-rain">
+                    <div class="code-line">console.log('Hello World');</div>
+                    <div class="code-line">function develop() { return 'amazing'; }</div>
+                    <div class="code-line">const passion = 'coding';</div>
+                    <div class="code-line">while(learning) { grow(); }</div>
                 </div>
-
-                <div class="proyecto" data-autor="fedejs">
-                    <img src="./Assets/img/js1.png" width="300" height="250" alt="TW">
-                    <h3>Clase 4</h3>
-                    <p>Pokemon funcion =>.</p>
-                    <a href="./Fede/Clase 03/index.html">Ver proyecto</a>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line glitch" data-text="Hola, soy">Hola, soy</span>
+                        <span class="title-name typewriter" data-text="Thiago Herrera">Thiago Herrera</span>
+                        <span class="title-role neon-glow">Desarrollador Full Stack</span>
+                    </h1>
+                    <p class="hero-description fade-in-up">
+                        Creando experiencias digitales excepcionales con código limpio y diseño innovador
+                    </p>
+                    <div class="hero-buttons slide-in-bottom">
+                        <a href="#proyectos" class="btn btn-primary pulse-btn">Ver Proyectos</a>
+                        <a href="#contacto" class="btn btn-secondary hover-lift">Contactar</a>
+                    </div>
                 </div>
+            </div>
+            <div class="scroll-indicator bounce-infinite">
+                <div class="scroll-arrow"></div>
+                <span class="scroll-text">Scroll</span>
+            </div>
+        </section>
 
-                <div class="proyecto" data-autor="fedejs">
-                    <img src="./Assets/img/js1.png" width="300" height="250" alt="TW">
-                    <h3>Clase 5</h3>
-                    <p>Cartas Dragon ball.</p>
-                    <a href="./Fede/Clase 04/index.html">Ver proyecto</a>
+        <section id="sobre-mi" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <p class="section-subtitle">Desarrollador apasionado por la tecnología</p>
                 </div>
-                
-                <!-- Proyectos de Fede DJ -->
-
-                <div class="proyecto" data-autor="fededj">
-                    <img src="./Assets/img/red.png" width="300" height="250" alt="TW">
-                    <h3>SpeeD</h3>
-                    <p>Red Social.</p>
-                    <a href="https://github.com/thiagoHerrera/portafolio/tree/main/FedeDJ/djang-crud-rsV2">Ver proyecto</a>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Soy un desarrollador Full Stack con experiencia en múltiples tecnologías. Me especializo en crear aplicaciones web modernas, escalables y con excelente experiencia de usuario.</p>
+                        <p>Mi enfoque se centra en escribir código limpio, seguir las mejores prácticas y mantenerme actualizado con las últimas tendencias tecnológicas.</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Frontend</h3>
+                            <div class="skills">
+                                <div class="skill-item">
+                                    <img src="./Assets/img/html.png" alt="HTML5">
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="./Assets/img/lenguaje-de-programacion.png" alt="CSS3">
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="./Assets/img/js.png" alt="JavaScript">
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="./Assets/img/react.png" alt="React">
+                                    <span>React</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Backend</h3>
+                            <div class="skills">
+                                <div class="skill-item">
+                                    <img src="./Assets/img/piton.png" alt="Python">
+                                    <span>Python</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="./Assets/img/icons8-django-a-high-level-python-web-framework-that-encourages-rapid-development-72.png" alt="Django">
+                                    <span>Django</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="./Assets/img/lenguaje-de-programacion-php.png" alt="PHP">
+                                    <span>PHP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Mobile & Otros</h3>
+                            <div class="skills">
+                                <div class="skill-item">
+                                    <img src="./Assets/img/flutter.jpg" alt="Flutter">
+                                    <span>Flutter</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="./Assets/img/ts.png" alt="TypeScript">
+                                    <span>TypeScript</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="./Assets/img/mysql.png" alt="MySQL">
+                                    <span>MySQL</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="./Assets/img/git.png" alt="Git">
+                                    <span>Git</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="./Assets/img/java.png" alt="Java">
+                                    <span>Java</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="formacion">
-            <h2>Mi Formación</h2>
-            <div class="formacion">
-                <div class="curso">
-                    <img src="./Assets/img/th.jpg" alt="Curso 1" class="curso-imagen">
-                    <div class="curso-info">
-                        <h3>Escuela Fatima 2011 - 2022</h3>
-                        <p>Escuela Nuestra Señora de Fatima, de nivel medio.</p>
+        <section id="proyectos" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mis Proyectos</h2>
+                    <p class="section-subtitle">Algunos de mis trabajos más destacados</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="./Assets/img/mcking.png" alt="McKing">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/thiagoHerrera/web" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>McKing</h3>
+                            <p>Aplicación web completa que simula una hamburguesería con sistema de pedidos y gestión.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="./Assets/img/tw.png" alt="TW Company Fitness">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/thiagoHerrera/Fitness-Web" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>TW Company Fitness</h3>
+                            <p>Plataforma fitness completa para gestión de rutinas y seguimiento de calorías.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="django">
+                        <div class="project-image">
+                            <img src="./Assets/img/red.png" alt="SpeeD">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/thiagoHerrera/portafolio/tree/main/FedeDJ/djang-crud-rsV2" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>SpeeD - Red Social</h3>
+                            <p>Red social desarrollada con Django, incluyendo perfiles de usuario y sistema de autenticación.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-image">
+                            <img src="./Assets/img/manejappweb.png" alt="ManejApp">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://manejapp.app/" class="project-link" target="_blank">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>ManejApp</h3>
+                            <p>Aplicación móvil para Android e iOS que facilita el contacto entre instructores y alumnos de manera independiente. En desarrollo.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ia">
+                        <div class="project-image">
+                            <img src="./Assets/img/ss.png" alt="FloraCore">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://floracore.onrender.com/" class="project-link" target="_blank">
+                                        <i class="fas fa-seedling"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>FloraCore - TESIS</h3>
+                            <p>Invernadero inteligente automático con inteligencia artificial para detección de enfermedades mediante análisis de imágenes.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">IA</span>
+                                <span class="tech-tag">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="react">
+                        <div class="project-image">
+                            <img src="./Assets/img/worchi.png" alt="Worchi Food">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/thiagoHerrera/Worchi-Food" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Worchi Food</h3>
+                            <p>Restaurante E-Commerce desarrollado con React para pedidos online y gestión de menú.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">E-Commerce</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="curso">
-                    <img src="./Assets/img/terraf.jpg" alt="Curso 2" class="curso-imagen">
-                    <div class="curso-info">
-                        <h3>Escuela Roberto Arlt 2022 - Actualidad</h3>
-                        <p>Comunidad Educativa Roberto Arlt E.E.S.T.N°3, nivel Tecnico Informatica </p>
-                    </div>
+            </div>
+        </section>
+
+        <section id="formacion" class="education">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mi Formación</h2>
+                    <p class="section-subtitle">Educación y desarrollo profesional</p>
                 </div>
-                <div class="curso">
-                    <img src="./Assets/img/godot.jpg" alt="Curso 3" class="curso-imagen">
-                    <div class="curso-info">
-                        <h3>Curso de creacion de Videojuegos </h3>
-                        <p>Curso de creacion de juegos 2D, diseñado en Godot Engine.</p>
+                <div class="education-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2011 - 2022</div>
+                            <h3>Educación Secundaria</h3>
+                            <h4>Escuela Nuestra Señora de Fátima</h4>
+                            <p>Formación académica de nivel medio con enfoque en ciencias exactas.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2022 - Actualidad</div>
+                            <h3>Técnico en Informática</h3>
+                            <h4>E.E.S.T.N°3 Roberto Arlt</h4>
+                            <p>Formación técnica especializada en desarrollo de software y sistemas informáticos.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2021</div>
+                            <h3>Desarrollo de Videojuegos</h3>
+                            <h4>Curso Especializado</h4>
+                            <p>Creación de juegos 2D utilizando Godot Engine y programación orientada a objetos.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">03/09/2025 - Actualidad</div>
+                            <h3>Pasantías - Soporte IT</h3>
+                            <h4>Ampacet</h4>
+                            <p>Soporte técnico en sistemas informáticos, mantenimiento de equipos y resolución de incidencias tecnológicas.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme a través de las siguientes plataformas:</p>
-            <div class="contacto">
-                <a href="https://github.com/thiagoHerrera"><img src="./Assets/img/git.png" class="icono" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/thiago-herrera-90185a263/" ><img src="./Assets/img/in.png" class="icono" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:tititomash@gmail.com" ><img src="./Assets/img/gmail.png" class="icono" aria-label="Correo"><i class="fas fa-envelope"></i></a>
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contacto</h2>
+                    <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>tititomash@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Ubicación</h3>
+                                <p>Argentina</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/thiagoHerrera" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/thiago-herrera-90185a263/" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="mailto:tititomash@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2024 Thiago Herrera. Todos los derechos reservados.</p>
-        </footer>
-    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Thiago Herrera. Todos los derechos reservados.</p>
+                <p>Desarrollado con ❤️ y mucho café</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="./Assets/js/scripts.js" defer></script>
 </body>
